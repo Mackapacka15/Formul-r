@@ -1,0 +1,33 @@
+header {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+form {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+label {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+footer {
+  margin-top: 20px;
+  background: linear-gradient(
+    132deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 173, 255, 0.9868989832261029) 87%
+  );
+  display: grid;
+  place-items: center;
+}

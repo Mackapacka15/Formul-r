@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Eurovision Quizz</title>
+  </head>
+  <body>
+    <header>
+      <h1>Eurovision Quizz</h1>
+    </header>
+    <main>
+      <form autocomplete="off">
+        <div>
+          <p>Vad heter du?</p>
+          <label>
+            <input
+              required
+              type="text"
+              name="name"
+              placeholder="Skriv ditt namn"
+              minlength="3"
+              maxlength="25"
+          /></label>
+        </div>
+        <div>
+          <p>Vilket land har vunnit Eurovision flest gånger?</p>
+          <label>
+            <input required type="radio" name="question1" /> Sverige
+          </label>
+          <label> <input type="radio" name="question1" /> Norge </label>
+          <label> <input type="radio" name="question1" /> Irland </label>
+          <label> <input type="radio" name="question1" /> Frankrike </label>
+        </div>
+        <div>
+          <p>Hur många gånger har det landet vunnit?</p>
+          <label> <input required type="radio" name="question2" /> 5 </label>
+          <label> <input type="radio" name="question2" /> 6 </label>
+          <label> <input type="radio" name="question2" /> 7 </label>
+          <label> <input type="radio" name="question2" /> 8 </label>
+        </div>
+        <div>
+          <p>Hur många vinster har sverige?</p>
+          <label> <input required type="radio" name="question3" /> 7 </label>
+          <label> <input type="radio" name="question3" /> 6 </label>
+          <label> <input type="radio" name="question3" /> 5 </label>
+          <label> <input type="radio" name="question3" /> 4 </label>
+        </div>
+        <div>
+          <p>Vem var först med att vinna Eurovision för sverige?</p>
+          <label>
+            <input required type="radio" name="question4" /> Herreys "Diggi-Loo
+            Diggi-Ley"
+          </label>
+          <label>
+            <input type="radio" name="question4" /> Carola "Fångad av en
+            stormvind"
+          </label>
+          <label>
+            <input type="radio" name="question4" /> Loreen "Euphoria"
+          </label>
+          <label>
+            <input type="radio" name="question4" /> ABBA "Watreloo"
+          </label>
+        </div>
+        <div>
+          <p>Vem van Eurovision 2001?</p>
+          <label>
+            <input required type="radio" name="question5" /> Sverige Carola
+            "Fångad av en stormvind"
+          </label>
+          <label>
+            <input type="radio" name="question5" /> Finnland Lordi "Hard Rock
+            Hallelujah"
+          </label>
+          <label>
+            <input type="radio" name="question5" /> Estland Tanel Padar & Dave
+            Benton "Everybody"
+          </label>
+          <label>
+            <input type="radio" name="question5" /> Sverige Loreen "Euphoria"
+          </label>
+        </div>
+        <button>Rätta!</button>
+      </form>
+    </main>
+    <footer>
+      <p>Markus Piotrowski TE19A</p>
+    </footer>
+  </body>
+</html>
