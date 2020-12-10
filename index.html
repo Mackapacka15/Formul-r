@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="quizz.js" defer > </script>
     <title>Eurovision Quizz</title>
   </head>
   <body>
@@ -11,79 +12,71 @@
       <h1>Eurovision Quizz</h1>
     </header>
     <main>
-      <form autocomplete="off">
-        <div>
-          <p>Vad heter du?</p>
-          <label>
-            <input
-              required
-              type="text"
-              name="name"
-              placeholder="Skriv ditt namn"
-              minlength="3"
-              maxlength="25"
-          /></label>
-        </div>
-        <div>
+      <form autocomplete="off" class="questions">
+        <div class="question">
           <p>Vilket land har vunnit Eurovision flest gånger?</p>
           <label>
-            <input required type="radio" name="question1" /> Sverige
+            <input required type="radio" name="question1" value="0"/> Sverige
           </label>
-          <label> <input type="radio" name="question1" /> Norge </label>
-          <label> <input type="radio" name="question1" /> Irland </label>
-          <label> <input type="radio" name="question1" /> Frankrike </label>
+          <label> <input type="radio" name="question1" value="0"/> Norge </label>
+          <label> <input type="radio" name="question1" value="1"/> Irland </label>
+          <label> <input type="radio" name="question1" value="0"/> Frankrike </label>
         </div>
-        <div>
+        <div class="question">
           <p>Hur många gånger har det landet vunnit?</p>
-          <label> <input required type="radio" name="question2" /> 5 </label>
-          <label> <input type="radio" name="question2" /> 6 </label>
-          <label> <input type="radio" name="question2" /> 7 </label>
-          <label> <input type="radio" name="question2" /> 8 </label>
+          <label> <input required type="radio" name="question2" value="0"/> 5 </label>
+          <label> <input type="radio" name="question2" value="0"/> 6 </label>
+          <label> <input type="radio" name="question2" value="1"/> 7 </label>
+          <label> <input type="radio" name="question2" value="0"/> 8 </label>
         </div>
-        <div>
+        <div class="question">
           <p>Hur många vinster har sverige?</p>
-          <label> <input required type="radio" name="question3" /> 7 </label>
-          <label> <input type="radio" name="question3" /> 6 </label>
-          <label> <input type="radio" name="question3" /> 5 </label>
-          <label> <input type="radio" name="question3" /> 4 </label>
+          <label> <input required type="radio" name="question3" value="0"/> 7 </label>
+          <label> <input type="radio" name="question3" value="1"/> 6 </label>
+          <label> <input type="radio" name="question3" value="0"/> 5 </label>
+          <label> <input type="radio" name="question3" value="0"/> 4 </label>
         </div>
-        <div>
+        <div class="question">
           <p>Vem var först med att vinna Eurovision för sverige?</p>
           <label>
-            <input required type="radio" name="question4" /> Herreys "Diggi-Loo
+            <input required type="radio" name="question4" value="0"/> Herreys "Diggi-Loo
             Diggi-Ley"
           </label>
           <label>
-            <input type="radio" name="question4" /> Carola "Fångad av en
+            <input type="radio" name="question4" value="0"/> Carola "Fångad av en
             stormvind"
           </label>
           <label>
-            <input type="radio" name="question4" /> Loreen "Euphoria"
+            <input type="radio" name="question4" value="0"/> Loreen "Euphoria"
           </label>
           <label>
-            <input type="radio" name="question4" /> ABBA "Watreloo"
+            <input type="radio" name="question4" value="1"/> ABBA "Watreloo"
           </label>
         </div>
-        <div>
+        <div class="question">
           <p>Vem van Eurovision 2001?</p>
           <label>
-            <input required type="radio" name="question5" /> Sverige Carola
+            <input required type="radio" name="question5" value="0"/> Sverige Carola
             "Fångad av en stormvind"
           </label>
           <label>
-            <input type="radio" name="question5" /> Finnland Lordi "Hard Rock
+            <input type="radio" name="question5" value="0"/> Finnland Lordi "Hard Rock
             Hallelujah"
           </label>
           <label>
-            <input type="radio" name="question5" /> Estland Tanel Padar & Dave
+            <input type="radio" name="question5" value="1"/> Estland Tanel Padar & Dave
             Benton "Everybody"
           </label>
           <label>
-            <input type="radio" name="question5" /> Sverige Loreen "Euphoria"
+            <input type="radio" name="question5" value="0"/> Sverige Loreen "Euphoria"
           </label>
         </div>
-        <button>Rätta!</button>
+        <button type="button" onclick="submitQuiz()">Rätta!</button>
       </form>
+      <div class="resultat invisible">
+        <h2>Du fick <span class="correct-answers">0</span> rätt!</h2>
+        <button type="button" onclick="resetQuiz()">Försök igen</button>
+      </div>
     </main>
     <footer>
       <p>Markus Piotrowski TE19A</p>
